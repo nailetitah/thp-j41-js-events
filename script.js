@@ -59,3 +59,41 @@ function nuclearPage() {
 }
 
 nuclearPage()
+
+function cardsView() {
+	viewButtons = document.querySelectorAll("button.btn.btn-sm.btn-success")
+	viewButtons.forEach(function(el) {
+		el.addEventListener("mouseover", function(e) {
+			card = e.target.offsetParent.offsetParent.offsetParent
+			text = card.firstElementChild.lastElementChild.firstElementChild
+			if (card.style.maxWidth != "20%") {
+				text.hidden = true
+				card.style.maxWidth = "20%"
+			} else {
+				text.hidden = false
+				card.style.maxWidth = "100%"
+			}
+		})
+	})
+}
+
+cardsView()
+
+function cardsRight() {
+	row = document.querySelector(".album").firstElementChild.firstElementChild
+	rightRow = document.querySelector("a.btn.btn-secondary.my-2")
+	rightRow.addEventListener("click", function() {
+		row.insertBefore(row.lastElementChild, row.firstElementChild)
+	})
+}
+cardsRight()
+
+function cardsLeft() {
+	row = document.querySelector(".album").firstElementChild.firstElementChild
+	leftRow = document.querySelector("a.btn.btn-primary.my-2")
+	leftRow.setAttribute("href", "#")
+	leftRow.addEventListener("click", function() {
+	row.insertBefore(row.firstElementChild, row.lastChild)
+	})
+}
+cardsLeft()
