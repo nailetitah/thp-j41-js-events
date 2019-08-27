@@ -1,3 +1,13 @@
+// Message d'accueil
+function welcome() {
+	alert("Hello, j'arrive à 11h pour les corrections ! Sorry. \n - Naïlé")
+}
+window.onload = welcome
+
+
+
+// Exercice 1
+
 function footerAlert() {
 	footer = document.querySelector("footer")
 	i = 1
@@ -9,6 +19,8 @@ function footerAlert() {
 
 footerAlert()
 
+// Exercice 2
+
 function hamburgerMenu() {
 	nav = document.getElementById("navbarHeader")
 	hambuger = document.querySelector("button", ".navbar-toggler")
@@ -19,6 +31,8 @@ function hamburgerMenu() {
 
 hamburgerMenu()
 
+// Exercice 3
+
 function redText() {
 	editCardButtonOne = document.querySelectorAll(".btn-outline-secondary")[0]
 	textCardOne = document.querySelectorAll(".card-text")[0]
@@ -28,6 +42,9 @@ function redText() {
 }
 
 redText()
+
+
+// Exercice 4
 
 function greenText() {
 	editCardButtonTwo = document.querySelectorAll(".btn-outline-secondary")[1]
@@ -44,6 +61,8 @@ function greenText() {
 }
 greenText()
 
+// Exercice 5
+
 function nuclearPage() {
 	navbar = document.querySelector("header")
 	bootstrap = document.querySelector("head").querySelector("link")
@@ -59,6 +78,8 @@ function nuclearPage() {
 }
 
 nuclearPage()
+
+// Exercice 6
 
 function cardsView() {
 	viewButtons = document.querySelectorAll("button.btn.btn-sm.btn-success")
@@ -79,6 +100,8 @@ function cardsView() {
 
 cardsView()
 
+// Exercice 7
+// 
 function cardsRight() {
 	row = document.querySelector(".album").firstElementChild.firstElementChild
 	rightRow = document.querySelector("a.btn.btn-secondary.my-2")
@@ -87,6 +110,8 @@ function cardsRight() {
 	})
 }
 cardsRight()
+
+// Exercice 8
 
 function cardsLeft() {
 	row = document.querySelector(".album").firstElementChild.firstElementChild
@@ -97,3 +122,4 @@ function cardsLeft() {
 	})
 }
 cardsLeft()
+
